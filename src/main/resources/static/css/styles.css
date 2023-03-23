@@ -1,0 +1,442 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+/*Header*/
+
+.main-nav {
+    min-height: 100vh;
+    width: 100%;
+    background: url('../images/movie-background-collage_23-2149876028.webp') center;
+    background-size: cover;
+    position: relative;
+}
+
+
+.main-nav .logo {
+    width: 75px;
+    padding-left: 15px;
+    padding-top: 20px;
+
+}
+
+.nav-links {
+    flex: 1;
+    text-align: center;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+.nav-links ul li::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: white;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.nav-links button {
+    color: white;
+    text-decoration: none;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.nav-links button::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: white;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links button:hover::after {
+    width: 100%;
+}
+
+/*Index*/
+
+.text-box {
+    width: 70%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 65px;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    color: white;
+    font-size: 30px;
+}
+
+
+/*как да изглежда на телефон*/
+/*@media(max-width: 700px) {*/
+/*    .text-box h1{*/
+/*        font-size: 40px;*/
+/*    }*/
+
+/*    .nav-links ul li{*/
+/*        display: block;*/
+/*    }*/
+
+/*    .nav-links{*/
+/*        position: absolute;*/
+/*        background: black;*/
+/*        height: 100vh;*/
+/*        width: 200px;*/
+/*        top: 0;*/
+/*        right: 0;*/
+/*        text-align: left;*/
+/*        z-index: 2;*/
+/*    }*/
+/*}*/
+
+/*.info div {*/
+/*    text-align: center;*/
+/*}*/
+
+
+/*About*/
+
+.info {
+    width: 70%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.info h1 {
+    text-align: center;
+    font-size: 65px;
+}
+
+.info p {
+    text-align: center;
+    margin: 10px 0 40px;
+    color: white;
+    font-size: 30px;
+}
+
+
+/*Login*/
+
+.logo-login {
+    width: 75px;
+    padding-left: 15px;
+    padding-top: 20px;
+}
+
+.login-p {
+    min-height: 100vh;
+    width: 100%;
+    background: url('../images/movie-background-collage_23-2149876028.webp') center;
+    background-size: cover;
+    position: relative;
+}
+
+.login-p .container {
+    position: absolute;
+    margin-left: 36%;
+    /*margin-bottom: 1%;*/
+    width: 440px;
+    height: 500px;
+    background-color: #002136;
+}
+
+.login-p .container h1 {
+    color: #fff;
+    margin-top: 60px;
+    margin-left: 50px;
+}
+
+.login-p .container input {
+    margin-left: 50px;
+    margin-top: 20px;
+    width: 320px;
+    height: 47px;
+    background-color: #333;
+    border-radius: 3px;
+    border: none;
+    font-size: 20px;
+}
+
+.login-p .container input::placeholder {
+    font-size: 17px;
+    margin-left: 15px;
+    padding: 12px;
+}
+
+.login-p .container input[type=submit] {
+    width: 320px;
+    height: 45px;
+    background-color: red;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 40px;
+}
+
+.login-p .container input[type=checkbox] {
+    width: 25px;
+    height: 18px;
+    border-radius: 5px;
+}
+
+.login-p .container label {
+    color: rgb(125, 119, 119);
+}
+
+.login-p .content {
+    position: absolute;
+    margin-top: 80px;
+    font-size: 9px;
+    margin-left: 55px;
+}
+
+.login-p .content h2 {
+    color: rgb(125, 119, 119);
+}
+
+.login-p .content a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/*REGISTER*/
+
+.logo-register {
+    width: 75px;
+    padding-left: 15px;
+    padding-top: 20px;
+}
+
+.register-p {
+    min-height: 100vh;
+    width: 100%;
+    background: url('../images/movie-background-collage_23-2149876028.webp') center;
+    background-size: cover;
+    position: relative;
+}
+
+.register-p .container {
+    position: absolute;
+    margin-left: 30%;
+    padding-right: 3%;
+    width: 800px;
+    height: 500px;
+    background-color: #002136;
+}
+
+.register-p .firstAndLast {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.register-p .emailAndUsername {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.register-p .passAndConfirmPass {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.register-p .container h1 {
+    color: #fff;
+    margin-top: 60px;
+    margin-left: 50px;
+}
+
+.register-p .container input {
+    margin-left: 50px;
+    margin-top: 20px;
+    width: 320px;
+    height: 47px;
+    background-color: #333;
+    border-radius: 3px;
+    border: none;
+    font-size: 20px;
+}
+
+.register-p .container input::placeholder {
+    font-size: 17px;
+    margin-left: 15px;
+    padding: 12px;
+}
+
+.register-p .container input[type=submit] {
+    width: 320px;
+    height: 45px;
+    background-color: red;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 40px;
+}
+
+.register-p .content {
+    position: absolute;
+    margin-top: 80px;
+    font-size: 9px;
+    margin-left: 55px;
+    text-align: center;
+
+}
+
+.register-p .content h2 {
+    color: rgb(125, 119, 119);
+}
+
+.register-p .content a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/*PROFILE*/
+
+/*.logo-profile{*/
+/*    width: 75px;*/
+/*    padding-left: 15px;*/
+/*    padding-top: 20px;*/
+/*}*/
+
+.profile-p{
+    min-height: 100vh;
+    width: 100%;
+    background: url('../images/movie-background-collage_23-2149876028.webp') center;
+    background-size: cover;
+    position: relative;
+}
+
+.profile-p .form{
+    width: 360px;
+    height: 400px;
+    border: 2px solid #3498db;
+    box-shadow: -3px -3px 7px #ffffff73,
+    3px 3px 5px rgba(94,104,121,0.288);
+    border-radius: 5px;
+    margin-top: 180px;
+    overflow: hidden;
+    /*background-color: #002136;*/
+    background-color: #244658;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+}
+
+.profile-p h1{
+    color: whitesmoke;
+}
+
+.profile-p h2{
+    color: whitesmoke;
+}
+
+.profile-p p{
+    margin-bottom: 10px;
+    color: whitesmoke;
+}
+
+.profile-p .form .edit-button{
+    color: white;
+    background-color: #244658;
+    border: 2px solid #3498db;
+    box-shadow: -3px -3px 7px #ffffff73,
+    3px 3px 5px rgba(94,104,121,0.288);
+    border-radius: 5px;
+    cursor: pointer;
+    height: 30px;
+    width: 45px;
+    font-size: medium;
+}
+
+.profile-p .form .save-button{
+    color: white;
+    background-color: #244658;
+    border: 2px solid #3498db;
+    box-shadow: -3px -3px 7px #ffffff73,
+    3px 3px 5px rgba(94,104,121,0.288);
+    border-radius: 5px;
+    cursor: pointer;
+    height: 30px;
+    width: 45px;
+    font-size: medium;
+}
+
+/*SERIES*/
+/*.all-series {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    min-height: 100vh;*/
+/*}*/
+
+.series {
+    width: 360px;
+    height: 400px;
+    border: 2px solid #3498db;
+    /*box-shadow: -3px -3px 7px #ffffff73,*/
+    /*3px 3px 5px rgba(94,104,121,0.288);*/
+    /*border-radius: 5px;*/
+    margin-top: 180px;
+    margin-left: 20px;
+    overflow: hidden;
+    position: static;
+    /*background-color: #002136;*/
+    background-color: #244658;
+    /*position: absolute;*/
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+}
+
