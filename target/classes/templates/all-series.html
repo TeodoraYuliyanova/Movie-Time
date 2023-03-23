@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>MovieTime</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="all-series">
+
+<header class="all-series-header">
+    <th:block th:replace="fragments/header.html"></th:block>
+</header>
+
+<div class="series">
+
+    <section th:each="s : ${series}" th:object="${s}">
+
+        <!--        <img th:src="*{pictureUrl}" alt="Title image">-->
+        <div>
+
+            <section id="video">
+                <iframe id="frame" th:src="'https://www.youtube.com/embed/' + *{videoUrl}">
+                </iframe>
+            </section>
+
+            <h2 th:text="*{name}">Title</h2>
+
+            <p th:text="*{description}">Description</p>
+
+
+        </div>
+    </section>
+
+
+</div>
+
+</body>
+</html>
