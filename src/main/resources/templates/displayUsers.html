@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Users</title>
+</head>
+<body>
+<ul id="userList"></ul>
+<script>
+    fetch("http://localhost:8080/users")
+        .then(response => response.json())
+        .then(users => {
+            const userList = document.getElementById('userList');
+            users.forEach(user => {
+                const li = document.createElement('li');
+                li.textContent = `${user.username}, ${user.firstName} ${user.lastName}`;
+                userList.appendChild(li);
+            });
+        });
+</script>
+</body>
+</html>
