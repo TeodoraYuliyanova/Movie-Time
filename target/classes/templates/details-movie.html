@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>MovieTime</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="details-movie">
+
+<div class="details-m">
+
+    <div th:replace="fragments/header :: header"></div>
+
+
+    <input type="hidden" name="routeId" id="routeId" th:value="${movie.id}">
+    <div th:object="${movie}">
+        <h2>Details:</h2>
+
+        <ul class="movie-details">
+            <li class="list-group-item">
+                <div class="name"><span th:text="*{name}"></span></div>
+                <section id="video" class="video">
+                    <iframe id="frame" th:src="'https://www.youtube.com/embed/' + *{videoURL}"
+                            allowfullscreen allow="autoplay; encrypted-media"></iframe>
+
+                </section>
+                <div class="released-year">• Released Year: <span th:text="*{releasedYear}"></span></div>
+                <div class="genres">
+                    <ul>
+                        <span>• Genre:</span><li th:each="genre : ${movie.genres}" th:text="${genre.name}"></li>
+                    </ul>
+                </div>
+                <div class="language">• Language: <span th:text="*{language}"></span></div>
+                <div class="description"><span th:text="*{description}"></span></div>
+            </li>
+        </ul>
+
+    </div>
+</div>
+</body>
+</html>
